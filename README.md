@@ -14,4 +14,5 @@ Developers : Jinhan Han(Computational mathematics, San Jose State University),
              Adam Yin (Computer science, San Jose State University)
 
 Jinhan's Linked In : https://www.linkedin.com/in/jinhan-jeremy-han/
+
 Taiga Project plan : https://tree.taiga.io/project/jinhanhan-crpyto-noticer/timeline
