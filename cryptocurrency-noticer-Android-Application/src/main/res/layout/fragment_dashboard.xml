@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_grey"
+    tools:context=".ui.dashboard.DashboardFragment">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="414dp"
+        android:layout_height="238dp"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="-2dp">
+
+        <TextView
+            android:id="@+id/current_rates"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_margin="20dp"
+            android:background="@color/green"
+            android:gravity="center"
+            android:text="dummy"
+            android:textColor="@color/white"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            android:text_align="center"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginTop="134dp"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+
+            <Button
+                android:id="@+id/time_button"
+                android:layout_width="45dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="34dp"
+                android:background="@color/button_grey"
+                android:gravity="center"
+                android:text="12hr"
+                android:textColor="@color/char_grey"
+                android:textSize="16dp" />
+
+            <Button
+                android:id="@+id/time_button2"
+                android:layout_width="45dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="34dp"
+                android:background="@color/button_grey"
+                android:text="1D"
+                android:textColor="@color/char_grey"
+
+                android:textSize="16dp" />
+
+            <Button
+                android:id="@+id/time_button3"
+                android:layout_width="45dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="34dp"
+                android:background="@color/button_grey"
+                android:text="1W"
+                android:textColor="@color/char_grey"
+
+                android:textSize="16dp" />
+
+            <Button
+                android:id="@+id/time_button4"
+                android:layout_width="45dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="34dp"
+                android:background="@color/button_grey"
+                android:text="1M"
+                android:textColor="@color/char_grey"
+
+                android:textSize="16dp" />
+
+            <Button
+                android:id="@+id/time_button5"
+                android:layout_width="45dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="34dp"
+                android:background="@color/button_grey"
+                android:text="1Y"
+
+                android:textColor="@color/char_grey"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id = "@+id/total_values"
+        android:layout_width="410dp"
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        android:background="@color/background_black"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+
+            android:layout_width="411dp"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="108dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="16dp"
+                android:textColor="@color/char_grey"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:text="Volume : " />
+
+            <TextView
+                android:layout_width="108dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="16dp"
+                android:text="dummy"
+                android:textColor="@color/orange"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="411dp"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="108dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="16dp"
+
+                android:textColor="@color/char_grey"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:text="Market Cap : "/>
+
+            <TextView
+                android:layout_width="108dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="16dp"
+                android:text="dummy"
+                android:textColor="@color/orange"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id = "@+id/sorter"
+        android:layout_width="411dp"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:background="@color/background_black"
+        app:layout_constraintTop_toBottomOf="@+id/total_values"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@color/background_black"
+            android:layout_marginLeft="16dp"
+            android:layout_gravity="center"
+            android:textColor="@color/char_grey"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:text=" # "/>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@color/background_black"
+            android:layout_marginLeft="16dp"
+            android:layout_gravity="center"
+            android:textColor="@color/char_grey"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:text="Name"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@color/background_black"
+            android:layout_marginLeft="16dp"
+            android:layout_gravity="center"
+            android:textColor="@color/char_grey"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:text="Rates"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@color/background_black"
+            android:layout_marginLeft="16dp"
+            android:layout_gravity="center"
+            android:textColor="@color/char_grey"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:text="Price"/>
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="346dp"
+        app:layout_constraintTop_toBottomOf="@+id/sorter"
+        android:orientation="horizontal">
+
+    </ScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+    android:id="@+id/nav_view"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="0dp"
+    android:layout_marginEnd="0dp"
+    android:background="@color/background_black"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+        app:itemTextColor="@color/char_grey"
+        app:menu="@menu/bottom_nav_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
