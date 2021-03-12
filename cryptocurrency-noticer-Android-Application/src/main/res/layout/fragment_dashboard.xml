@@ -9,7 +9,7 @@
 
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/graph_window"
         android:layout_width="414dp"
         android:layout_height="238dp"
         android:orientation="vertical"
@@ -24,13 +24,16 @@
             android:layout_margin="20dp"
             android:background="@color/green"
             android:gravity="center"
-            android:text="dummy"
+
             android:textColor="@color/white"
             android:textSize="13dp"
             android:textStyle="bold"
-            android:text_align="center"></TextView>
+            android:text_align="center"
+            android:text="dummy">
+        </TextView>
 
         <LinearLayout
+            android:id="@+id/timebutton_layout"
             android:layout_width="match_parent"
             android:layout_height="32dp"
             android:layout_marginTop="134dp"
@@ -45,9 +48,10 @@
                 android:layout_marginLeft="34dp"
                 android:background="@color/button_grey"
                 android:gravity="center"
-                android:text="12hr"
+
                 android:textColor="@color/char_grey"
-                android:textSize="16dp" />
+                android:textSize="16dp"
+                android:text="12hr"/>
 
             <Button
                 android:id="@+id/time_button2"
@@ -56,10 +60,10 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="34dp"
                 android:background="@color/button_grey"
-                android:text="1D"
-                android:textColor="@color/char_grey"
 
-                android:textSize="16dp" />
+                android:textColor="@color/char_grey"
+                android:textSize="16dp"
+                android:text="1D"/>
 
             <Button
                 android:id="@+id/time_button3"
@@ -68,10 +72,10 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="34dp"
                 android:background="@color/button_grey"
-                android:text="1W"
-                android:textColor="@color/char_grey"
 
-                android:textSize="16dp" />
+                android:textColor="@color/char_grey"
+                android:textSize="16dp"
+                android:text="1W"/>
 
             <Button
                 android:id="@+id/time_button4"
@@ -80,10 +84,10 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="34dp"
                 android:background="@color/button_grey"
-                android:text="1M"
-                android:textColor="@color/char_grey"
 
-                android:textSize="16dp" />
+                android:textColor="@color/char_grey"
+                android:textSize="16dp"
+                android:text="1M"/>
 
             <Button
                 android:id="@+id/time_button5"
@@ -92,10 +96,10 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="34dp"
                 android:background="@color/button_grey"
-                android:text="1Y"
 
                 android:textColor="@color/char_grey"
-                android:textSize="16dp" />
+                android:textSize="16dp"
+                android:text="1Y"/>
 
         </LinearLayout>
 
@@ -107,21 +111,23 @@
         android:layout_height="60dp"
         android:orientation="vertical"
         android:background="@color/background_black"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/graph_window"
         tools:ignore="MissingConstraints">
 
         <LinearLayout
-
+            android:id = "@+id/volume_pannel"
             android:layout_width="411dp"
             android:layout_height="30dp"
             android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintTop_toBottomOf="@+id/graph_window"
             tools:ignore="MissingConstraints">
 
             <TextView
                 android:layout_width="108dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="16dp"
+                android:gravity="center"
+
                 android:textColor="@color/char_grey"
                 android:textSize="16dp"
                 android:textStyle="bold"
@@ -131,23 +137,26 @@
                 android:layout_width="108dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="16dp"
-                android:text="dummy"
+
                 android:textColor="@color/orange"
                 android:textSize="16dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:text="dummy"/>
         </LinearLayout>
 
         <LinearLayout
+            android:id = "@+id/marketCap_pannel"
             android:layout_width="411dp"
             android:layout_height="30dp"
             android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintTop_toBottomOf="@+id/graph_window"
             tools:ignore="MissingConstraints">
 
             <TextView
                 android:layout_width="108dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="16dp"
+                android:gravity="center"
 
                 android:textColor="@color/char_grey"
                 android:textSize="16dp"
@@ -158,17 +167,18 @@
                 android:layout_width="108dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="16dp"
-                android:text="dummy"
+
                 android:textColor="@color/orange"
                 android:textSize="16dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:text="dummy"/>
         </LinearLayout>
 
 
     </LinearLayout>
 
     <LinearLayout
-        android:id = "@+id/sorter"
+        android:id = "@+id/sorter_pannel"
         android:layout_width="411dp"
         android:layout_height="30dp"
         android:orientation="horizontal"
@@ -182,6 +192,7 @@
             android:background="@color/background_black"
             android:layout_marginLeft="16dp"
             android:layout_gravity="center"
+
             android:textColor="@color/char_grey"
             android:textSize="16dp"
             android:textStyle="bold"
@@ -193,6 +204,7 @@
             android:background="@color/background_black"
             android:layout_marginLeft="16dp"
             android:layout_gravity="center"
+
             android:textColor="@color/char_grey"
             android:textSize="14dp"
             android:textStyle="bold"
@@ -204,6 +216,7 @@
             android:background="@color/background_black"
             android:layout_marginLeft="16dp"
             android:layout_gravity="center"
+
             android:textColor="@color/char_grey"
             android:textSize="14dp"
             android:textStyle="bold"
@@ -215,6 +228,7 @@
             android:background="@color/background_black"
             android:layout_marginLeft="16dp"
             android:layout_gravity="center"
+
             android:textColor="@color/char_grey"
             android:textSize="14dp"
             android:textStyle="bold"
@@ -222,12 +236,14 @@
 
     </LinearLayout>
     <ScrollView
+        android:id = "@+id/crypto_lists"
         android:layout_width="match_parent"
         android:layout_height="346dp"
-        app:layout_constraintTop_toBottomOf="@+id/sorter"
+        app:layout_constraintTop_toBottomOf="@+id/sorter_pannel"
         android:orientation="horizontal">
 
     </ScrollView>
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
     android:id="@+id/nav_view"
     android:layout_width="0dp"
