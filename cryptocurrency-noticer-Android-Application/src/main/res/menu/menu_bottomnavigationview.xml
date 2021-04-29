@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+        <item android:id= "@+id/tab1"
+            app:showAsAction="always"
+            android:icon="@drawable/ic_baseline_storage_24"
+            android:checked="true"
+            android:title="@string/main_home"
+            />
+
+        <item android:id= "@+id/tab2"
+            app:showAsAction="always"
+            android:icon="@drawable/ic_baseline_timeline_24"
+            android:checked="true"
+            android:title="@string/history"/>
+
+        <item android:id= "@+id/tab3"
+            app:showAsAction="always"
+            android:icon="@drawable/ic_baseline_add_alert_24"
+            android:checked="true"
+            android:title="@string/alert"/>
+
+        <item android:id= "@+id/tab4"
+            app:showAsAction="always"
+            android:icon="@drawable/ic_baseline_star_24"
+            android:checked="true"
+            android:title="@string/wishlists"/>
+
+        <item android:id= "@+id/tab5"
+            app:showAsAction="always"
+            android:icon="@drawable/ic_baseline_ballot_24"
+            android:checked="true"
+            android:title="@string/news_info"/>
+
+</menu>

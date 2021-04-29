@@ -1,260 +1,602 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_grey"
-    tools:context=".ui.dashboard.DashboardFragment">
+    tools:context=".fragment_dashboard">
 
 
-    <LinearLayout
+
+    <!--410x790 size-->
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/graph_window"
-        android:layout_width="414dp"
-        android:layout_height="238dp"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+
+        app:layout_constraintHeight_percent=".35"
+
         android:orientation="vertical"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-2dp"
-        tools:layout_editor_absoluteY="-2dp">
+
+        app:layout_constraintBottom_toTopOf="@+id/total_values"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
 
         <TextView
             android:id="@+id/current_rates"
-            android:layout_width="60dp"
-            android:layout_height="30dp"
-            android:layout_margin="20dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
             android:background="@color/green"
             android:gravity="center"
 
+            android:text="dummy"
             android:textColor="@color/white"
-            android:textSize="13dp"
+            android:textSize="18dp"
+
             android:textStyle="bold"
-            android:text_align="center"
-            android:text="dummy">
-        </TextView>
 
-        <LinearLayout
-            android:id="@+id/timebutton_layout"
-            android:layout_width="match_parent"
-            android:layout_height="32dp"
-            android:layout_marginTop="134dp"
-            android:orientation="horizontal"
-            tools:ignore="MissingConstraints">
+            app:layout_constraintHeight_percent="0.15"
+            app:layout_constraintWidth_percent=".2"
 
-            <Button
-                android:id="@+id/time_button"
-                android:layout_width="45dp"
-                android:layout_height="24dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="34dp"
-                android:background="@color/button_grey"
-                android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
 
-                android:textColor="@color/char_grey"
-                android:textSize="16dp"
-                android:text="12hr"/>
-
-            <Button
-                android:id="@+id/time_button2"
-                android:layout_width="45dp"
-                android:layout_height="24dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="34dp"
-                android:background="@color/button_grey"
-
-                android:textColor="@color/char_grey"
-                android:textSize="16dp"
-                android:text="1D"/>
-
-            <Button
-                android:id="@+id/time_button3"
-                android:layout_width="45dp"
-                android:layout_height="24dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="34dp"
-                android:background="@color/button_grey"
-
-                android:textColor="@color/char_grey"
-                android:textSize="16dp"
-                android:text="1W"/>
-
-            <Button
-                android:id="@+id/time_button4"
-                android:layout_width="45dp"
-                android:layout_height="24dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="34dp"
-                android:background="@color/button_grey"
-
-                android:textColor="@color/char_grey"
-                android:textSize="16dp"
-                android:text="1M"/>
-
-            <Button
-                android:id="@+id/time_button5"
-                android:layout_width="45dp"
-                android:layout_height="24dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="34dp"
-                android:background="@color/button_grey"
-
-                android:textColor="@color/char_grey"
-                android:textSize="16dp"
-                android:text="1Y"/>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id = "@+id/total_values"
-        android:layout_width="410dp"
-        android:layout_height="60dp"
-        android:orientation="vertical"
-        android:background="@color/background_black"
-        app:layout_constraintTop_toBottomOf="@+id/graph_window"
-        tools:ignore="MissingConstraints">
-
-        <LinearLayout
-            android:id = "@+id/volume_pannel"
-            android:layout_width="411dp"
-            android:layout_height="30dp"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/graph_window"
-            tools:ignore="MissingConstraints">
-
-            <TextView
-                android:layout_width="108dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="16dp"
-                android:gravity="center"
-
-                android:textColor="@color/char_grey"
-                android:textSize="16dp"
-                android:textStyle="bold"
-                android:text="Volume : " />
-
-            <TextView
-                android:layout_width="108dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="16dp"
-
-                android:textColor="@color/orange"
-                android:textSize="16dp"
-                android:textStyle="bold"
-                android:text="dummy"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id = "@+id/marketCap_pannel"
-            android:layout_width="411dp"
-            android:layout_height="30dp"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/graph_window"
-            tools:ignore="MissingConstraints">
-
-            <TextView
-                android:layout_width="108dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="16dp"
-                android:gravity="center"
-
-                android:textColor="@color/char_grey"
-                android:textSize="16dp"
-                android:textStyle="bold"
-                android:text="Market Cap : "/>
-
-            <TextView
-                android:layout_width="108dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="16dp"
-
-                android:textColor="@color/orange"
-                android:textSize="16dp"
-                android:textStyle="bold"
-                android:text="dummy"/>
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id = "@+id/sorter_pannel"
-        android:layout_width="411dp"
-        android:layout_height="30dp"
-        android:orientation="horizontal"
-        android:background="@color/background_black"
-        app:layout_constraintTop_toBottomOf="@+id/total_values"
-        tools:ignore="MissingConstraints">
+            app:layout_constraintVertical_bias="0.05"
+            app:layout_constraintHorizontal_bias="0.05"
+            />
 
         <Button
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@color/background_black"
-            android:layout_marginLeft="16dp"
+            android:id="@+id/time_button"
+
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+
+            app:layout_constraintHeight_percent=".1"
+            app:layout_constraintWidth_percent=".12"
+
+            android:background="@color/button_grey"
+            android:text="12HR"
+
+            android:textColor="@color/clickcolor"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/time_button2"
+            app:layout_constraintHorizontal_chainStyle="spread"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.06"/>
+
+        <Button
+            android:id="@+id/time_button2"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+
+            app:layout_constraintHeight_percent=".1"
+            app:layout_constraintWidth_percent=".12"
+
+            android:background="@color/button_grey"
+            android:text="1D"
+
+            android:checked="true"
+
+            app:itemTextColor="@color/clickcolor"
+            android:textColor="@color/clickcolor"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/time_button3"
+            app:layout_constraintStart_toEndOf="@+id/time_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.075" />
+
+
+        <Button
+            android:id="@+id/time_button3"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+
+            app:layout_constraintHeight_percent=".1"
+            app:layout_constraintWidth_percent=".12"
+
+            android:background="@color/button_grey"
+
+            android:text="1W"
+
+            android:textColor="@color/char_grey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/time_button4"
+            app:layout_constraintStart_toEndOf="@+id/time_button2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.09"/>
+
+        <Button
+            android:id="@+id/time_button4"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+
+            app:layout_constraintHeight_percent=".1"
+            app:layout_constraintWidth_percent=".12"
+
+            android:background="@color/button_grey"
+
+            android:text="1M"
+
+            android:textColor="@color/char_grey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/time_button5"
+            app:layout_constraintStart_toEndOf="@+id/time_button3"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.15"
+            />
+
+
+        <Button
+            android:id="@+id/time_button5"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+
+            app:layout_constraintHeight_percent=".1"
+            app:layout_constraintWidth_percent=".12"
+
+            android:background="@color/button_grey"
+
+            android:text="1Y"
+
+            android:textColor="@color/char_grey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/time_button4"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.165"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id = "@+id/total_values"
+        android:layout_width="fill_parent"
+
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.1"
+        android:orientation="vertical"
+
+        android:background="@color/background_black"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/graph_window"
+        app:layout_constraintBottom_toTopOf="@+id/sorter_pannel"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id = "@+id/volume_pannel"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.5"
+            android:orientation="horizontal"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+
+                app:layout_constraintHeight_percent="1.0"
+                app:layout_constraintWidth_percent=".25"
+                android:gravity="center"
+
+                android:text="Volume : "
+                android:textColor="@color/char_grey"
+                android:textSize="16dp"
+
+                android:textStyle="bold"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+
+                app:layout_constraintHeight_percent="1.0"
+                app:layout_constraintWidth_percent=".55"
+
+                android:gravity="center"
+
+                android:text="dummy"
+                android:textColor="@color/orange"
+                android:textSize="16dp"
+                android:textStyle="bold"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintLeft_toRightOf="@+id/textView1"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id = "@+id/marketCap_pannel"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+
+            app:layout_constraintHeight_percent="0.5"
+
+            android:orientation="horizontal"
+
+            app:layout_constraintTop_toBottomOf="@+id/volume_pannel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+
+                app:layout_constraintHeight_percent="1.0"
+                app:layout_constraintWidth_percent=".3"
+
+                android:gravity="center"
+
+                android:text="Market Cap : "
+                android:textColor="@color/char_grey"
+                android:textSize="16dp"
+                android:textStyle="bold"
+
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+
+                app:layout_constraintHeight_percent="1.0"
+                app:layout_constraintWidth_percent=".55"
+
+                android:text="dummy"
+                android:gravity="center"
+
+                android:textColor="@color/orange"
+                android:textSize="16dp"
+                android:textStyle="bold"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintLeft_toRightOf="@+id/textView2"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sorter_pannel"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/background_black"
+
+        android:orientation="horizontal"
+
+        app:layout_constraintBottom_toTopOf="@+id/crypto_lists"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHeight_percent="0.04"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/total_values">
+
+        <Button
+            android:id="@+id/order_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
             android:layout_gravity="center"
+
+            android:background="@color/background_black"
+            android:text=" # "
 
             android:textColor="@color/char_grey"
             android:textSize="16dp"
+
             android:textStyle="bold"
-            android:text=" # "/>
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintHeight_percent="1.0"
+            app:layout_constraintWidth_percent=".1" />
+
 
         <Button
-            android:layout_width="100dp"
-            android:layout_height="30dp"
-            android:background="@color/background_black"
-            android:layout_marginLeft="16dp"
-            android:layout_gravity="center"
+            android:id="@+id/name_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
 
+            android:layout_gravity="center"
+            android:background="@color/background_black"
+
+
+            android:text="Name"
             android:textColor="@color/char_grey"
+
             android:textSize="14dp"
             android:textStyle="bold"
-            android:text="Name"/>
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/rates_button"
+
+            app:layout_constraintHeight_percent="1.0"
+            app:layout_constraintWidth_percent="0.25"
+
+            app:layout_constraintStart_toEndOf="@+id/order_button"
+            />
 
         <Button
-            android:layout_width="100dp"
-            android:layout_height="30dp"
-            android:background="@color/background_black"
-            android:layout_marginLeft="16dp"
+            android:id="@+id/rates_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
             android:layout_gravity="center"
 
+            android:background="@color/background_black"
+
+            android:text="Rates"
+
             android:textColor="@color/char_grey"
+
             android:textSize="14dp"
             android:textStyle="bold"
-            android:text="Rates"/>
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/price_button"
+
+            app:layout_constraintHeight_percent="1.0"
+            app:layout_constraintWidth_percent="0.25"
+
+            app:layout_constraintStart_toEndOf="@+id/name_button"
+            />
 
         <Button
-            android:layout_width="100dp"
-            android:layout_height="30dp"
-            android:background="@color/background_black"
-            android:layout_marginLeft="16dp"
+            android:id="@+id/price_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
             android:layout_gravity="center"
 
+            android:background="@color/background_black"
+
+            android:text="Price"
+
             android:textColor="@color/char_grey"
+
             android:textSize="14dp"
             android:textStyle="bold"
-            android:text="Price"/>
 
-    </LinearLayout>
-    <ScrollView
-        android:id = "@+id/crypto_lists"
-        android:layout_width="match_parent"
-        android:layout_height="346dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintWidth_percent="0.3"
+            app:layout_constraintHeight_percent="1.0"
+
+            app:layout_constraintStart_toEndOf="@+id/rates_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id ="@+id/gr"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sorter_pannel"
-        android:orientation="horizontal">
+        app:layout_constraintVertical_bias="0.0"
+        >
 
-    </ScrollView>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-    android:id="@+id/nav_view"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="0dp"
-    android:layout_marginEnd="0dp"
-    android:background="@color/background_black"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-        app:itemTextColor="@color/char_grey"
-        app:menu="@menu/bottom_nav_menu" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id = "@+id/lists_window"
+        android:layout_height="0dp"
+        android:layout_width="fill_parent"
+        app:layout_constraintHeight_percent="0.8"
 
+        android:orientation="horizontal"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:background="@color/background_black"
+
+        app:layout_constraintTop_toBottomOf="@+id/sorter_pannel"
+
+        app:layout_constraintVertical_bias="0.7"
+        >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id = "@+id/lists"
+        android:layout_height="0dp"
+        android:layout_width="fill_parent"
+        app:layout_constraintHeight_percent="0.07"
+
+        android:orientation="horizontal"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:background="@color/background_black"
+
+        app:layout_constraintVertical_bias="0.7"
+        >
+
+        <TextView
+            android:id="@+id/order_dummy"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            android:gravity="center"
+            android:textAlignment="gravity"
+
+            android:background="@color/background_black"
+            android:text=" # "
+
+            android:textColor="@color/char_grey"
+            android:textSize="16dp"
+
+            android:textStyle="bold"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintHeight_percent="1.0"
+            app:layout_constraintWidth_percent=".1" />
+
+
+        <TextView
+            android:id="@+id/name_dummy"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            android:gravity="center"
+            android:textAlignment="gravity"
+
+            android:background="@color/background_black"
+
+
+            android:text="Name"
+            android:textColor="@color/char_grey"
+
+            android:textSize="14dp"
+            android:textStyle="bold"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/rates_dummy"
+
+            app:layout_constraintHeight_percent="1.0"
+            app:layout_constraintWidth_percent="0.25"
+
+            app:layout_constraintStart_toEndOf="@+id/order_dummy"
+            />
+
+        <TextView
+            android:id="@+id/rates_dummy"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            android:gravity="center"
+            android:textAlignment="gravity"
+
+            android:background="@color/background_black"
+
+            android:text="Rates"
+
+            android:textColor="@color/char_grey"
+
+            android:textSize="14dp"
+            android:textStyle="bold"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/price_dummy"
+
+            app:layout_constraintHeight_percent="1.0"
+            app:layout_constraintWidth_percent="0.25"
+
+            app:layout_constraintStart_toEndOf="@+id/name_dummy"
+            />
+
+        <TextView
+            android:id="@+id/price_dummy"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            android:gravity="center"
+            android:textAlignment="gravity"
+
+            android:background="@color/background_black"
+
+            android:text="Price"
+
+            android:textColor="@color/char_grey"
+
+            android:textSize="14dp"
+            android:textStyle="bold"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintWidth_percent="0.3"
+            app:layout_constraintHeight_percent="1.0"
+
+            app:layout_constraintStart_toEndOf="@+id/rates_dummy"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/grh"
+            android:layout_width="fill_parent"
+            android:layout_height="10dp"
+
+            android:layout_marginTop="600dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+
+            app:layout_constraintVertical_bias="0.0"
+
+
+            app:layout_constraintTop_toTopOf="parent"
+            ></TextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+

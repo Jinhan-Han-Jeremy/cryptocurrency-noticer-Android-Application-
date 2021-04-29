@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:fitsSystemWindows="true"
+    android:background="@color/background_grey"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/graph_window"
+        android:layout_width="414dp"
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="-2dp">
+
+        <TextView
+            android:id="@+id/current_rates"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_margin="20dp"
+            android:background="@color/green"
+            android:gravity="center"
+
+            android:textColor="@color/white"
+            android:textSize="13dp"
+            android:textStyle="bold"
+
+            android:text="dummy">
+        </TextView>
+
+    </LinearLayout>
+    <!--green box has shown coin rates, you can get rate changes from api-->
+
+
+    <!--volume: market cap: boxes start on-->
+    <LinearLayout
+        android:id = "@+id/total_values"
+        android:layout_width="410dp"
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        android:background="@color/background_black"
+        app:layout_constraintTop_toBottomOf="@+id/graph_window"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:id = "@+id/volume_pannel"
+            android:layout_width="411dp"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/graph_window"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="108dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="16dp"
+                android:gravity="center"
+
+                android:textColor="@color/char_grey"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:text="Volume : " />
+
+            <TextView
+                android:layout_width="108dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="16dp"
+
+                android:textColor="@color/orange"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:text="dummy"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id = "@+id/marketCap_pannel"
+            android:layout_width="411dp"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/graph_window"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="108dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="16dp"
+                android:gravity="center"
+
+                android:textColor="@color/char_grey"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:text="Market Cap : "/>
+
+            <TextView
+                android:layout_width="108dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="16dp"
+
+                android:textColor="@color/orange"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:text="dummy"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <!--volume: market cap: boxes end box-->
+
+    <!--name rates   price button boxes start on-->
+    <LinearLayout
+        android:id = "@+id/sorter_pannel"
+        android:layout_width="411dp"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:background="@color/background_black"
+        app:layout_constraintTop_toBottomOf="@+id/total_values"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@color/background_black"
+            android:layout_marginLeft="16dp"
+            android:layout_gravity="center"
+
+            android:textColor="@color/char_grey"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:text=" # "/>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@color/background_black"
+            android:layout_marginLeft="16dp"
+            android:layout_gravity="center"
+
+            android:textColor="@color/char_grey"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:text="Name"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@color/background_black"
+            android:layout_marginLeft="16dp"
+            android:layout_gravity="center"
+
+            android:textColor="@color/char_grey"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:text="Rates"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@color/background_black"
+            android:layout_marginLeft="16dp"
+            android:layout_gravity="center"
+
+            android:textColor="@color/char_grey"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:text="Price"/>
+
+    </LinearLayout>
+    <!--name rates  price button boxes end point-->
+
+    <!--add your lists box-->
+    <ScrollView
+        android:id="@+id/crypto_lists"
+        android:layout_width="match_parent"
+        android:layout_height="581dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/sorter_pannel">
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
