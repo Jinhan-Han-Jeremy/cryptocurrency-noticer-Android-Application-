@@ -39,9 +39,9 @@
             android:background="@color/green"
             android:gravity="center"
 
-            android:text="dummy"
+
             android:textColor="@color/white"
-            android:textSize="18dp"
+            android:textSize="12dp"
 
             android:textStyle="bold"
 
@@ -222,6 +222,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+                android:id="@+id/volume"
                 android:layout_height="0dp"
                 android:layout_width="0dp"
 
@@ -278,6 +279,7 @@
                 />
 
             <TextView
+                android:id="@+id/marketcap"
                 android:layout_height="0dp"
                 android:layout_width="0dp"
 
@@ -354,6 +356,7 @@
 
             android:textSize="14dp"
             android:textStyle="bold"
+            android:clickable="true"
 
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -371,6 +374,7 @@
             android:layout_height="0dp"
 
             android:layout_gravity="center"
+            android:clickable="true"
 
             android:background="@color/background_black"
 
@@ -397,6 +401,7 @@
             android:layout_height="0dp"
 
             android:layout_gravity="center"
+            android:clickable="true"
 
             android:background="@color/background_black"
 
@@ -421,179 +426,177 @@
 
 
     <androidx.core.widget.NestedScrollView
-        android:id ="@+id/gr"
+        android:id="@+id/gr"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
 
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sorter_pannel"
-        app:layout_constraintVertical_bias="0.0"
-        >
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id = "@+id/lists_window"
-        android:layout_height="0dp"
-        android:layout_width="fill_parent"
-        app:layout_constraintHeight_percent="0.8"
-
-        android:orientation="horizontal"
-
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
-        android:background="@color/background_black"
-
-        app:layout_constraintTop_toBottomOf="@+id/sorter_pannel"
-
-        app:layout_constraintVertical_bias="0.7"
-        >
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id = "@+id/lists"
-        android:layout_height="0dp"
-        android:layout_width="fill_parent"
-        app:layout_constraintHeight_percent="0.07"
-
-        android:orientation="horizontal"
-
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-
-        android:background="@color/background_black"
-
-        app:layout_constraintVertical_bias="0.7"
-        >
-
-        <TextView
-            android:id="@+id/order_dummy"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-
-            android:gravity="center"
-            android:textAlignment="gravity"
-
-            android:background="@color/background_black"
-            android:text=" # "
-
-            android:textColor="@color/char_grey"
-            android:textSize="16dp"
-
-            android:textStyle="bold"
-
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-
-            app:layout_constraintHeight_percent="1.0"
-            app:layout_constraintWidth_percent=".1" />
+        app:layout_constraintTop_toBottomOf="@+id/sorter_pannel"
+        app:layout_constraintVertical_bias="1.0">
 
 
-        <TextView
-            android:id="@+id/name_dummy"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-
-            android:gravity="center"
-            android:textAlignment="gravity"
-
-            android:background="@color/background_black"
-
-
-            android:text="Name"
-            android:textColor="@color/char_grey"
-
-            android:textSize="14dp"
-            android:textStyle="bold"
-
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/rates_dummy"
-
-            app:layout_constraintHeight_percent="1.0"
-            app:layout_constraintWidth_percent="0.25"
-
-            app:layout_constraintStart_toEndOf="@+id/order_dummy"
-            />
-
-        <TextView
-            android:id="@+id/rates_dummy"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-
-            android:gravity="center"
-            android:textAlignment="gravity"
-
-            android:background="@color/background_black"
-
-            android:text="Rates"
-
-            android:textColor="@color/char_grey"
-
-            android:textSize="14dp"
-            android:textStyle="bold"
-
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/price_dummy"
-
-            app:layout_constraintHeight_percent="1.0"
-            app:layout_constraintWidth_percent="0.25"
-
-            app:layout_constraintStart_toEndOf="@+id/name_dummy"
-            />
-
-        <TextView
-            android:id="@+id/price_dummy"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-
-            android:gravity="center"
-            android:textAlignment="gravity"
-
-            android:background="@color/background_black"
-
-            android:text="Price"
-
-            android:textColor="@color/char_grey"
-
-            android:textSize="14dp"
-            android:textStyle="bold"
-
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-
-            app:layout_constraintWidth_percent="0.3"
-            app:layout_constraintHeight_percent="1.0"
-
-            app:layout_constraintStart_toEndOf="@+id/rates_dummy"
-            app:layout_constraintEnd_toEndOf="parent"
-            />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <TextView
-            android:id="@+id/grh"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lists_window"
             android:layout_width="fill_parent"
-            android:layout_height="10dp"
+            android:layout_height="0dp"
+            android:background="@color/background_black"
 
-            android:layout_marginTop="600dp"
+            android:orientation="horizontal"
 
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.8"
+
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/sorter_pannel"
+
+            app:layout_constraintVertical_bias="0.7">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/lists"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:background="@color/background_black"
+
+                android:orientation="horizontal"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.07"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintVertical_bias="0.7">
+
+                <TextView
+                    android:id="@+id/order_dummy"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+
+                    android:background="@color/background_black"
+                    android:clickable="true"
+                    android:gravity="center"
+
+                    android:text=" # "
+                    android:textAlignment="gravity"
+
+                    android:textColor="@color/char_grey"
+                    android:textSize="16dp"
+
+                    android:textStyle="bold"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHeight_percent="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent=".1" />
 
 
-            app:layout_constraintVertical_bias="0.0"
+                <TextView
+                    android:id="@+id/name_dummy"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+
+                    android:background="@color/background_black"
+                    android:clickable="true"
+                    android:gravity="center"
+
+                    android:text="Name"
 
 
-            app:layout_constraintTop_toTopOf="parent"
-            ></TextView>
+                    android:textAlignment="gravity"
+                    android:textColor="@color/char_grey"
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/rates_dummy"
+                    app:layout_constraintHeight_percent="1.0"
+
+                    app:layout_constraintStart_toEndOf="@+id/order_dummy"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    app:layout_constraintWidth_percent="0.25" />
+
+                <TextView
+                    android:id="@+id/rates_dummy"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+
+                    android:background="@color/background_black"
+                    android:clickable="true"
+                    android:gravity="center"
+
+                    android:text="Rates"
+
+                    android:textAlignment="gravity"
+
+                    android:textColor="@color/char_grey"
+
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/price_dummy"
+                    app:layout_constraintHeight_percent="1.0"
+
+                    app:layout_constraintStart_toEndOf="@+id/name_dummy"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    app:layout_constraintWidth_percent="0.25" />
+
+                <TextView
+                    android:id="@+id/price_dummy"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+
+                    android:background="@color/background_black"
+                    android:clickable="true"
+                    android:gravity="center"
+
+                    android:text="Price"
+
+                    android:textAlignment="gravity"
+
+                    android:textColor="@color/char_grey"
+
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    app:layout_constraintHeight_percent="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/rates_dummy"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.3" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/grh"
+                android:layout_width="fill_parent"
+                android:layout_height="10dp"
+
+                android:layout_marginTop="600dp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+
+                app:layout_constraintTop_toTopOf="parent"
+
+
+                app:layout_constraintVertical_bias="0.0"></TextView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </androidx.core.widget.NestedScrollView>

@@ -1,15 +1,16 @@
 package com.example.crypto_noticer;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.FragmentTransaction;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.FrameLayout;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
@@ -18,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     fragment_alert_set fragment3;
     fragment_wishlists fragment4;
     fragment_news fragment5;
+    public static boolean login_statu;
+    public static String account;
 
 
     @Override protected void onCreate(Bundle savedInstanceState)
@@ -70,4 +73,24 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch(item.getItemId()){
+            case R.id.item1:
+                Intent intent = new Intent(MainActivity.this, login_Activity.class);
+                startActivity(intent);
+                return true;
+
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.dropdown_menu, menu);
+        return true;
+    }
+
 }
