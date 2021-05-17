@@ -9,11 +9,11 @@ This application provides multiple functions to cryptocurrency investors
 Functions : Setting alarm for changes of cryptocurrency prices, Saving past data of targeted cryptocurrencies, 
 Sorting price variability, Recommending popular cryptocurrencies
 
-Prototype UI/UX (adobe XD) : https://xd.adobe.com/view/1e3898d1-d40b-4133-bbb7-df509c5b162a-4b6b/
+Prototype UI/UX (adobe XD) : https://xd.adobe.com/view/932b18f2-753c-40e0-bfec-5dacdf7ac9ad-c678/#access_token=eyJhbGciOiJSUzI1NiIsIng1dSI6Imltc19uYTEta2V5LTEuY2VyIn0.eyJpZCI6IjE2MTc4NDEyMDU4MjJfMzM5NzRjOWEtMjJmYy00ZGYzLWEzNmYtMDExYWY5YjQ2Njk2X3V3MiIsImNsaWVudF9pZCI6IkNvbWV0V2ViMSIsInVzZXJfaWQiOiIwQjZBOEFDOTU5RjAxQThDMEE0OTVDQUFAQWRvYmVJRCIsInR5cGUiOiJhY2Nlc3NfdG9rZW4iLCJhcyI6Imltcy1uYTEiLCJhYV9pZCI6IjBCNkE4QUM5NTlGMDFBOEMwQTQ5NUNBQUBBZG9iZUlEIiwiZmciOiJWS1dCWVZHVFZMRzVOSDRDQ01aTFJIUUE3WT09PT09PSIsInNpZCI6IjE2MTc4NDExNjE1NThfZDU2MzJlM2ItOGJhYS00YmQ0LWFmMDgtZjMxY2JmNDcyZTg0X3V3MiIsIm1vaSI6IjVlMGM1YzRlIiwiZXhwaXJlc19pbiI6Ijg2NDAwMDAwIiwic2NvcGUiOiIiLCJjcmVhdGVkX2F0IjoiMTYxNzg0MTIwNTgyMiJ9.YU0nfeeRUCes0Lo6sGtdFlr4hjo_7qnvQe00Ol458iaw_Vqp76e0eJrHzZjqyqrhmQdFWAVCvSV9OjKl3EqvxgVZelYbcpcNNzkypC5DfxneI60JBSxmUaTYN-KcqrQbxVsTVOaJErwZnbUFgoZyuah1HrfmtT7s-7EURwjKt4_VyLRVYwbAFs5TD8FbYS_hs2KVMf1V-4wdcDv3edve1CxDsIr3hjBbkSuxHKZZlq8MYMA4rGSufyqsBp-RnjysOZtH2ZSmjS8MurhqrGrJBZIKZdUEbSxM-0KCCd4A7ysiAGn6injz3EiR90Fe_pyQYYUu7vJCX4q1y017BJt4FA&token_type=bearer&expires_in=86399997
 
 Developers : Jinhan Han (Student, Computational mathematics, San Jose State University), 
              Adam Yin (Student, Computer science, San Jose State University)
 
 Jinhan's Linked In : https://www.linkedin.com/in/jinhan-jeremy-han/
 
-Taiga Project plan : https://tree.taiga.io/project/jinhanhan-crpyto-noticer/timeline
+Taiga Project plan : https://tree.taiga.io/project/13720522456-crytonoticer/timeline
